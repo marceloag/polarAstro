@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NoticiasOrganicas from '../components/NoticiasOrganicas.astro';
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+import NoticiaDestacada from '../components/NoticiaDestacada.astro';
+import Footer from '../components/Footer.astro';
+import DestacadaOrganica from '../components/DestacadaOrganica.astro';
+---
+
+<Layout title="Radio Polar.">
+  <Header />
+  <section class="px-6 my-3 max-w-screen-2xl m-auto">
+    <div class="grid grid-cols-12 gap-4 items-start">
+      <div class="md:col-span-9 col-span-12">
+        <NoticiaDestacada />
+        <hr class="border-gray-200 my-4 border-2" />
+        <DestacadaOrganica />
+        <hr class="border-gray-200 my-4 border-2" />
+        <NoticiasOrganicas />
+      </div>
+      <Sidebar />
+    </div>
+  </section>
+  <Footer />
+</Layout>
