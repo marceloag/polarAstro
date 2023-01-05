@@ -8,17 +8,6 @@ let res = await fetch(
 );
 let [post] = await res.json();
 
-// The getStaticPaths() is required for static Astro sites.
-// If using SSR, you will not need this function.
-// export async function getStaticPaths() {
-//   let data = await fetch('https://polar.croop.cl/wp-json/wp/v2/posts');
-//   let posts = await data.json();
-
-//   return posts.map((post: any) => ({
-//     params: { slug: post.slug },
-//     props: { post: post }
-//   }));
-// }
 ---
 
 <Page title={post.title.rendered}>

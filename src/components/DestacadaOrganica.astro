@@ -14,7 +14,7 @@ let posts = await res.json();
   {
     posts.map((post: any) => (
       <div class="noticia relative h-auto mb-3">
-        <a href="<?php the_permalink();?>" class="cursor-pointer">
+        <a href={`/noticias/${post.slug}/`} class="cursor-pointer">
           <img
             src={
               post._embedded['wp:featuredmedia']['0'].media_details.sizes.medium
@@ -29,7 +29,7 @@ let posts = await res.json();
             <i class="fa fa-calendar" /> {post.date.replace('T', ' ')}
           </span>
           <h2 class="text-gray-600 text-lg px font-sans font-normal">
-            <a href="<?php the_permalink();?>">{post.title.rendered}</a>
+            <a href={`/noticias/${post.slug}/`}>{post.title.rendered}</a>
           </h2>
         </div>
       </div>
