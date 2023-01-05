@@ -4,7 +4,7 @@ import Page from '../../layouts/Page.astro';
 const { slug } = Astro.params;
 
 let res = await fetch(
-  `https://radiopolar.com/wp-json/wp/v2/posts?slug=${slug}`
+  `https://polar.croop.cl/wp-json/wp/v2/posts?slug=${slug}`
 );
 let [post] = await res.json();
 
